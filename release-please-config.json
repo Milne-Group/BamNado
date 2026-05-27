@@ -6,8 +6,16 @@
       "package-name": "bamnado",
       "include-component-in-tag": false,
       "extra-files": [
-        "bamnado-python/Cargo.toml",
-        "pyproject.toml"
+        {
+          "type": "toml",
+          "path": "bamnado-python/Cargo.toml",
+          "jsonpath": "$.package.version"
+        },
+        {
+          "type": "toml",
+          "path": "pyproject.toml",
+          "jsonpath": "$.project.version"
+        }
       ]
     }
   }
